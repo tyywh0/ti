@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Profissional de TI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">SENAI</div>
+        <nav class="navbar">
+            <a href="#">Início</a>
+            <a href="#">Vagas de Emprego</a>
+            <a href="#">Notícias</a>
+            <a href="#">Quem Somos</a>
+            <a href="#">Suporte</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar...">
+        </div>
+    </header>
+
+    <div class="banner-slider">
+        <div class="slide active">
+            <img src="banner1.png" alt="Banner 1">
+            <div class="slide-text">O PERFIL DO PROFISSIONAL DE TI EM 2025</div>
+        </div>
+        <div class="slide">
+            <img src="banner2.png" alt="Banner 2">
+            <div class="slide-text">O MERCADO DE TRABALHO EM TI EM 2025</div>
+        </div>
+        <div class="slide">
+            <img src="Captura de tela 2025-01-30 211115.png" alt="Banner 3">
+            <div class="slide-text">PROFISSÕES EM ALTA NO TI</div>
+        </div>
+
+        <div class="slider-controls">
+            <button id="prev">&#10094;</button>
+            <button id="next">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- Botões principais -->
+    <div class="main-buttons">
+        <div class="button">Vagas</div>
+        <div class="button">Mercado de Trabalho</div>
+        <div class="button">Notícias</div>
+        <div class="button">TI</div>
+    </div>
+
+    <!-- Conteúdo adicional -->
+    <div class="content">
+        <h1>O Mercado de Trabalho em TI em 2025</h1>
+        <p>Explore as tendências e o perfil do profissional ideal para o futuro da tecnologia da informação.</p>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 SENAI. Todos os direitos reservados.</p>
+        <p>Dúvidas?Fale Conosco
+        </p>
+        <p>Contato: 55 5555 5555</p>
+        <ul>
+            <li><link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"></li>
+        </ul>
+    </footer>
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let currentIndex = 0;
+
+        document.getElementById('prev').addEventListener('click', () => {
+            slides[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+            slides[currentIndex].classList.add('active');
+        });
+
+        document.getElementById('next').addEventListener('click', () => {
+            slides[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+            slides[currentIndex].classList.add('active');
+        });
+    </script>
+</body>
+</html>
